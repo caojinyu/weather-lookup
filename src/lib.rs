@@ -23,7 +23,7 @@ async fn handler(
         Some(c) => get_weather(c).map(|w| {
             format!(
                 r#"
-        城市: {}
+        天气: {}
         最低温度: {} °C
         最高温度 {} °C
         风速 {} km/h
