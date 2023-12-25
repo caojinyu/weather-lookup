@@ -1,0 +1,16 @@
+[package]
+edition = "2021"
+name = "weather-lookup"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+http_req_wasi = {version = "*", features = ["wasmedge_ssl"]}
+serde = {version = "*", features = ["derive"]}
+serde_json = "*"
+tokio_wasi = {version = "*", features = ["macros", "rt"]}
+webhook-flows = "*"
